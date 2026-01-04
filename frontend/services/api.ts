@@ -2,9 +2,9 @@
 import axios from 'axios'; 
 import { User, Resource, Booking, UserRole, BookingStatus } from '../../types';
 
-// Chunke aapka server.ts PORT 5000 use kar raha hai, isay 5000 karein
+// server.ts is running on this port  PORT 5000
 // const API_BASE = 'http://localhost:3001/api'; 
-const API_BASE = 'http://54.172.127.74:5000/api';
+const API_BASE = 'http://3.213.38.136:5000/api';    // in aws we use flexible api so this IP address will not be changed when ever the server start again
 
 const api = axios.create({ baseURL: API_BASE });
 
@@ -16,28 +16,6 @@ api.interceptors.request.use((config: any) => {
   return config;
 });
 
-// export const apiService = {
-//   login: async (email: string, pass: string) => {
-//     const { data } = await api.post('/auth/login', { email, password: pass });
-//     localStorage.setItem('itu_token', data.token);
-//     localStorage.setItem('itu_user', JSON.stringify(data.user));
-//     return data.user;
-//   },
-//   signup: async (name: string, email: string, role: UserRole, pass: string) => {
-//     // Backend expects 'password', api.ts was sending 'password: pass' - it's correct
-//     const { data } = await api.post('/auth/signup', { name, email, role, password: pass });
-//     return data;
-//   },
-//   // ... baqi functions same rakhein
-//   logout: () => {
-//     localStorage.removeItem('itu_token');
-//     localStorage.removeItem('itu_user');
-//   },
-//   getCurrentUser: (): User | null => {
-//     const user = localStorage.getItem('itu_user');
-//     return user ? JSON.parse(user) : null;
-//   }
-// };
 
 export const apiService = {
   login: async (email: string, pass: string) => {
