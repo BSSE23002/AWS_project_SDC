@@ -48,12 +48,11 @@ The system is optimized for a cloud-native environment with the following config
 
 Navigate to the backend directory:
 
-```bash
-cd ~/AWS_project_SDC/backend
+```cd ~/AWS_project_SDC/backend ```
 
 Start the server using PM2 with the ESM loader:
 
-```bash
+
 pm2 start "npx tsx server.ts" --name "backend"
 
 
