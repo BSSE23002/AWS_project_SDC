@@ -53,7 +53,7 @@ Navigate to the backend directory:
 Start the server using PM2 with the ESM loader:
 
 
-pm2 start "npx tsx server.ts" --name "backend"
+```pm2 start "npx tsx server.ts" --name "backend"```
 
 
 
@@ -61,14 +61,11 @@ pm2 start "npx tsx server.ts" --name "backend"
 
 Navigate to the frontend directory:
 
-``bash
-cd ~/AWS_project_SDC/frontend
+```cd ~/AWS_project_SDC/frontend```
 
 Start the Vite development server:
 
-``bash
-
-pm2 start "npm run dev -- --host" --name "frontend"
+```pm2 start "npm run dev -- --host" --name "frontend"```
 
 
 
@@ -86,16 +83,16 @@ The pm2 list command was used to verify that the backend service is in an Online
 
 Local Connectivity:
 The backend server’s ability to accept requests was tested by running
-curl http://localhost:5000/api/auth/login
+curl ```http://localhost:5000/api/auth/login```
 in the terminal.
 
 Public Access:
 Direct access was tested by entering the public IP in the browser
-(http://54.82.99.197:5000/api/resources)
+```(http://54.82.99.197:5000/api/resources)```
 to confirm that the AWS Security Group allows external connections.
 
 Log Analysis:
-Runtime errors (such as ERR_UNKNOWN_FILE_EXTENSION) were identified and resolved using pm2 logs backend.
+Runtime errors (such as ```ERR_UNKNOWN_FILE_EXTENSION```) were identified and resolved using pm2 logs backend.
 
 
 - **2. Frontend Testing (UI & Integration)**  
@@ -106,10 +103,10 @@ Deployment Check:
 The pm2 list command was used to confirm that the frontend server is online and running on port 3000.
 
 Service Binding:
-The backend IP address (54.82.99.197) was updated in frontend/src/services/api.ts to ensure proper communication between the frontend and backend.
+The backend IP address (54.82.99.197) was updated in ```frontend/src/services/api.ts``` to ensure proper communication between the frontend and backend.
 
 Browser Console:
-The browser’s Inspect Element → Console tab was used to track errors such as net::ERR_CONNECTION_REFUSED, helping identify blocked or failed connections.
+The browser’s Inspect Element → Console tab was used to track errors such as ```net::ERR_CONNECTION_REFUSED```, helping identify blocked or failed connections.
 
 
 - **3. Integration & Security Testing**  
