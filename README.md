@@ -42,7 +42,7 @@ The system is optimized for a cloud-native environment with the following config
   Intelligent backend logic prevents multiple users from booking the same resource for overlapping time slots.
 
 
-## 🚀 Running on EC2
+### 🚀 Running on EC2
 
 ### Backend Setup
 
