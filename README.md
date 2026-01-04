@@ -88,7 +88,7 @@ in the terminal.
 
 Public Access:
 Direct access was tested by entering the public IP in the browser
-```(http://54.82.99.197:5000/api/resources)```
+```(http://3.213.38.136:5000/api/resources)```
 to confirm that the AWS Security Group allows external connections.
 
 Log Analysis:
@@ -103,7 +103,7 @@ Deployment Check:
 The pm2 list command was used to confirm that the frontend server is online and running on port 3000.
 
 Service Binding:
-The backend IP address (54.82.99.197) was updated in ```frontend/src/services/api.ts``` to ensure proper communication between the frontend and backend.
+The backend IP address (3.213.38.136) was updated in ```frontend/src/services/api.ts``` to ensure proper communication between the frontend and backend.
 
 Browser Console:
 The browser’s Inspect Element → Console tab was used to track errors such as ```net::ERR_CONNECTION_REFUSED```, helping identify blocked or failed connections.
